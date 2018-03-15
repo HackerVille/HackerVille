@@ -7,19 +7,20 @@ package main;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Paths;
 
 /**
  *
  * @author user
  */
 public class WriteFile {
-    private static final String FILENAME = "/Users/user/NetBeansProjects/FirstAPP/src/main/file-write.txt";
+    private static final String FILENAME =  Paths.get("").toAbsolutePath().toString()+"\\src\\main\\file-write.txt";
     
      public static void main(String[] args) {
          try {
             PrintWriter pw = new PrintWriter(FILENAME);
             pw.println("sss is easy to use.");
-            pw.println("  ");
+            pw.println("dada  ");
             pw.println(1234);
             pw.close();
          } catch (IOException e) {

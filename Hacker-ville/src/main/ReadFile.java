@@ -8,16 +8,20 @@ package main;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Paths;
 
 /**
  *
  * @author user
  */
 public class ReadFile {
-
-	private static final String FILENAME = "/Users/user/NetBeansProjects/FirstAPP/src/main/file-read.txt";
+    
+        
+	private static final String FILENAME =  Paths.get("").toAbsolutePath().toString()+"\\src\\main\\file-read.txt";
+        
 
 	public static void main(String[] args) {
+            System.out.println(FILENAME);
 
 		try (BufferedReader br = new BufferedReader(new FileReader(FILENAME))) {
 
